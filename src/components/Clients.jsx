@@ -6,12 +6,13 @@ import logoComercialFerramentas from '../assets/logos-empresas/comercial-ferrame
 import logoDevassa from '../assets/logos-empresas/devassa-brasilia-pessoa-cardoso.png';
 import logoPostoShell from '../assets/logos-empresas/posto-shell-pessoa-cardoso.png';
 import logoPremiumEngenharia from '../assets/logos-empresas/premium-engenharia-pessoa-cardoso.png';
+import logoSobesaCafe from '../assets/logos-empresas/sobesa-cafe-pessoa-cardoso.png';
 
 export default function Clients() {
     // Agora a lista é um array de objetos contendo o nome e o caminho da logo
     // DICA: Salve as imagens das logos dentro da pasta "public/logos/" do seu projeto Vite.
     const clientes = [
-        { name: 'Sobesa Café', logoUrl: null },
+        { name: 'Sobesa Café', logoUrl: logoSobesaCafe },
         { name: 'Academia do Vale', logoUrl: logoAcademiaDoVale },
         { name: 'Premium Engenharia', logoUrl: logoPremiumEngenharia },
         { name: 'Codef', logoUrl: logoComercialFerramentas },
