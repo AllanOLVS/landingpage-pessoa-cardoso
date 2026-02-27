@@ -1,7 +1,35 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Scale, MapPin, Building2, Phone, Mail } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+    const formRef = useRef();
+    const [sending, setSending] = useState(false);
+    const [feedback, setFeedback] = useState({ type: '', message: '' });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSending(true);
+        setFeedback({ type: '', message: '' });
+
+        emailjs
+            .sendForm(
+                'YOUR_SERVICE_ID',   // ← Substituir pelo Service ID do EmailJS
+                'YOUR_TEMPLATE_ID',  // ← Substituir pelo Template ID do EmailJS
+                formRef.current,
+                'YOUR_PUBLIC_KEY'    // ← Substituir pela Public Key do EmailJS
+            )
+            .then(() => {
+                setSending(false);
+                setFeedback({ type: 'success', message: 'Mensagem enviada com sucesso! Entraremos em contato em breve.' });
+                formRef.current.reset();
+            })
+            .catch(() => {
+                setSending(false);
+                setFeedback({ type: 'error', message: 'Erro ao enviar mensagem. Tente novamente ou entre em contato por telefone.' });
+            });
+    };
+
     return (
         <section id="contato" className="py-24 bg-stone-50">
             <div className="container mx-auto px-6 lg:px-12">
@@ -12,25 +40,36 @@ export default function Contact() {
                         <h2 className="font-serif text-3xl text-stone-900 mb-2">Fale Conosco</h2>
                         <p className="text-stone-500 mb-8 text-sm">Envie sua mensagem. Retornaremos o mais breve possível.</p>
 
-                        <form className="space-y-6">
+                        <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label className="block text-sm font-medium text-stone-700 mb-1">Nome *</label>
-                                <input type="text" className="w-full border-b border-stone-300 py-2 focus:outline-none focus:border-amber-600 bg-transparent transition-colors" placeholder="Seu nome completo" />
+                                <input type="text" name="from_name" required className="w-full border-b border-stone-300 py-2 focus:outline-none focus:border-amber-600 bg-transparent transition-colors" placeholder="Seu nome completo" />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-stone-700 mb-1">E-mail *</label>
-                                <input type="email" className="w-full border-b border-stone-300 py-2 focus:outline-none focus:border-amber-600 bg-transparent transition-colors" placeholder="seu.email@exemplo.com" />
+                                <input type="email" name="from_email" required className="w-full border-b border-stone-300 py-2 focus:outline-none focus:border-amber-600 bg-transparent transition-colors" placeholder="seu.email@exemplo.com" />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-stone-700 mb-1">Assunto</label>
-                                <input type="text" className="w-full border-b border-stone-300 py-2 focus:outline-none focus:border-amber-600 bg-transparent transition-colors" placeholder="Motivo do contato" />
+                                <input type="text" name="subject" className="w-full border-b border-stone-300 py-2 focus:outline-none focus:border-amber-600 bg-transparent transition-colors" placeholder="Motivo do contato" />
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-stone-700 mb-1">Mensagem</label>
-                                <textarea rows="4" className="w-full border-b border-stone-300 py-2 focus:outline-none focus:border-amber-600 bg-transparent transition-colors resize-none" placeholder="Escreva sua mensagem aqui..."></textarea>
+                                <textarea rows="4" name="message" required className="w-full border-b border-stone-300 py-2 focus:outline-none focus:border-amber-600 bg-transparent transition-colors resize-none" placeholder="Escreva sua mensagem aqui..."></textarea>
                             </div>
-                            <button type="button" className="bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 rounded-sm font-bold tracking-wider uppercase text-sm transition-all w-full md:w-auto">
-                                Enviar Mensagem
+
+                            {feedback.message && (
+                                <div className={`text-sm p-3 rounded-sm ${feedback.type === 'success' ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'}`}>
+                                    {feedback.message}
+                                </div>
+                            )}
+
+                            <button
+                                type="submit"
+                                disabled={sending}
+                                className="bg-amber-700 hover:bg-amber-800 disabled:bg-amber-400 disabled:cursor-not-allowed text-white px-8 py-3 rounded-sm font-bold tracking-wider uppercase text-sm transition-all w-full md:w-auto"
+                            >
+                                {sending ? 'Enviando...' : 'Enviar Mensagem'}
                             </button>
                         </form>
                     </div>
@@ -72,17 +111,23 @@ export default function Contact() {
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <Mail className="text-amber-600 w-5 h-5 flex-shrink-0" />
-                                    <p className="text-stone-300">contato@pessoacardoso.adv.br</p>
+                                    <p className="text-stone-300 break-all">allan.oliveiraa009@gmail.com</p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Map Placeholder */}
-                        <div className="mt-10 h-48 bg-stone-800 rounded border border-stone-700 flex items-center justify-center relative z-10">
-                            <span className="text-stone-500 flex flex-col items-center">
-                                <MapPin className="mb-2 opacity-50" />
-                                Placeholder do Google Maps
-                            </span>
+                        {/* Google Maps */}
+                        <div className="mt-10 h-48 rounded border border-stone-700 overflow-hidden relative z-10">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.9579219261425!2d-38.459819901644245!3d-12.977234266258302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b53e8602ca3%3A0xe5f018a8b4c0b8c1!2sTorre%20Am%C3%A9rica!5e0!3m2!1spt-BR!2sbr!4v1772211815787!5m2!1spt-BR!2sbr"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Localização Pessoa Cardoso Advogados"
+                            ></iframe>
                         </div>
                     </div>
                 </div>

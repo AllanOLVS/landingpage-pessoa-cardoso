@@ -4,7 +4,8 @@ export default function Team() {
     return (
         <section id="equipe" className="py-24 bg-white">
             <div className="container mx-auto px-6 lg:px-12">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                {/* Cabeçalho da Seção - Agora centralizado no mobile e alinhado à esquerda no desktop */}
+                <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-6 text-center md:text-left">
                     <div>
                         <h4 className="text-amber-700 font-bold tracking-widest uppercase text-sm mb-3">Nosso Time</h4>
                         <h2 className="font-serif text-4xl lg:text-5xl text-stone-900">Corpo Jurídico</h2>
@@ -15,13 +16,15 @@ export default function Team() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
                     {/* Lawyer 1 */}
-                    <div className="flex flex-col sm:flex-row gap-6 group">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
                         <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-stone-300 relative">
                             <span className="text-stone-400 text-sm font-medium absolute z-10 text-center px-4">Inserir Foto<br />Antonio Pessoa</span>
                             <div className="absolute inset-0 bg-stone-300/50 group-hover:bg-transparent transition-colors z-20"></div>
                         </div>
-                        <div>
+                        {/* Div do texto com alinhamento responsivo */}
+                        <div className="text-center sm:text-left">
                             <h3 className="font-serif text-2xl text-stone-900 font-bold mb-1 group-hover:text-amber-700 transition-colors">Antonio Pessoa Cardoso</h3>
                             <p className="text-amber-600 text-sm font-bold uppercase tracking-wider mb-4">Sócio Fundador / Ex-Magistrado</p>
                             <div className="text-stone-600 text-sm space-y-2 leading-relaxed">
@@ -33,11 +36,12 @@ export default function Team() {
                     </div>
 
                     {/* Lawyer 2 */}
-                    <div className="flex flex-col sm:flex-row gap-6 group">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
                         <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-stone-300 relative">
                             <span className="text-stone-400 text-sm font-medium absolute z-10 text-center px-4">Inserir Foto<br />Pablício Cardoso</span>
                         </div>
-                        <div>
+                        {/* Div do texto com alinhamento responsivo */}
+                        <div className="text-center sm:text-left">
                             <h3 className="font-serif text-2xl text-stone-900 font-bold mb-1 group-hover:text-amber-700 transition-colors">Pablício Monteiro Cardoso</h3>
                             <p className="text-amber-600 text-sm font-bold uppercase tracking-wider mb-4">Sócio</p>
                             <div className="text-stone-600 text-sm space-y-2 leading-relaxed">
@@ -49,11 +53,12 @@ export default function Team() {
                     </div>
 
                     {/* Lawyer 3 */}
-                    <div className="flex flex-col sm:flex-row gap-6 group">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
                         <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-stone-300 relative">
                             <span className="text-stone-400 text-sm font-medium absolute z-10 text-center px-4">Inserir Foto<br />Pablo Cardoso</span>
                         </div>
-                        <div>
+                        {/* Div do texto com alinhamento responsivo */}
+                        <div className="text-center sm:text-left">
                             <h3 className="font-serif text-2xl text-stone-900 font-bold mb-1 group-hover:text-amber-700 transition-colors">Pablo Monteiro Cardoso</h3>
                             <p className="text-amber-600 text-sm font-bold uppercase tracking-wider mb-4">Advogado Especialista</p>
                             <div className="text-stone-600 text-sm space-y-2 leading-relaxed">
@@ -65,11 +70,12 @@ export default function Team() {
                     </div>
 
                     {/* Lawyer 4 */}
-                    <div className="flex flex-col sm:flex-row gap-6 group">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
                         <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-stone-300 relative">
                             <span className="text-stone-400 text-sm font-medium absolute z-10 text-center px-4">Inserir Foto<br />Adriano Lacerda</span>
                         </div>
-                        <div>
+                        {/* Div do texto com alinhamento responsivo */}
+                        <div className="text-center sm:text-left">
                             <h3 className="font-serif text-2xl text-stone-900 font-bold mb-1 group-hover:text-amber-700 transition-colors">Adriano Rios de Lacerda</h3>
                             <p className="text-amber-600 text-sm font-bold uppercase tracking-wider mb-4">Advogado Especialista</p>
                             <div className="text-stone-600 text-sm space-y-2 leading-relaxed">
@@ -79,6 +85,7 @@ export default function Team() {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

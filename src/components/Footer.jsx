@@ -63,7 +63,7 @@ export default function Footer() {
 
                 <div className="flex flex-col md:flex-row justify-between items-center text-stone-600 text-xs">
                     <p>© {new Date().getFullYear()} by PESSOA CARDOSO ADVOGADOS. Todos os direitos reservados.</p>
-                    <p className="mt-2 md:mt-0">Desenvolvido com excelência.</p>
+                    <p className="mt-2 md:mt-0">Desenvolvido por <a href="https://linktr.ee/venyxtechnology?utm_source=linktree_profile_share&ltsid=406e8dba-8cb5-4fec-a091-a09b9c2ae3ed">Venyx Technology</a>.</p>
                 </div>
             </div>
         </footer>
