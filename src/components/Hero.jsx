@@ -8,10 +8,10 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-stone-950/95 via-stone-900/90 to-stone-950/80"></div>
             </div>
 
-            <div className="container mx-auto px-6 lg:px-12 relative z-10 pt-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10 pt-20">
                 <div className="max-w-3xl">
-                    <div className="inline-block bg-amber-700/20 border border-amber-600/30 px-4 py-1.5 rounded-full mb-6">
-                        <span className="text-amber-500 font-medium text-sm tracking-widest uppercase">Mais de 40 anos de militância</span>
+                    <div className="inline-block bg-amber-700/20 border border-amber-600/30 px-3 sm:px-4 py-1.5 rounded-full mb-6">
+                        <span className="text-amber-500 font-medium text-xs sm:text-sm tracking-wider sm:tracking-widest uppercase">Mais de 40 anos de militância</span>
                     </div>
                     <h2 className="text-5xl lg:text-7xl font-serif text-white leading-tight mb-6">
                         Conceito, <br />
