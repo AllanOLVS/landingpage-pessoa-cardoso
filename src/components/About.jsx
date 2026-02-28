@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from './ScrollReveal';
 import { CheckCircle2 } from 'lucide-react';
 
 export default function About() {
@@ -6,7 +7,7 @@ export default function About() {
         <section id="quem-somos" className="py-24 bg-white">
             <div className="container mx-auto px-6 lg:px-12">
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
-                    <div className="lg:w-1/2">
+                    <ScrollReveal direction="left" className="lg:w-1/2">
                         <div className="relative">
                             <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Escritório de Advocacia" className="rounded-sm shadow-2xl" />
                             <div className="absolute -bottom-8 -right-8 bg-stone-900 text-white p-8 rounded-sm shadow-xl hidden md:block max-w-xs">
@@ -14,8 +15,8 @@ export default function About() {
                                 <p className="text-sm text-stone-300">Primamos, acima de tudo, pela experiência e seriedade na defesa de nossos clientes.</p>
                             </div>
                         </div>
-                    </div>
-                    <div className="lg:w-1/2">
+                    </ScrollReveal>
+                    <ScrollReveal direction="right" className="lg:w-1/2">
                         <h4 className="text-amber-700 font-bold tracking-widest uppercase text-sm mb-3">Quem Somos</h4>
                         <h2 className="font-serif text-4xl lg:text-5xl text-stone-900 mb-6 leading-tight">
                             Eficiência, criatividade e compromisso com o seu direito.
@@ -38,7 +39,7 @@ export default function About() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </div>
         </section>

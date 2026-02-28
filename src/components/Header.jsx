@@ -16,6 +16,13 @@ export default function Header() {
 
     const closeMenu = () => setIsMobileMenuOpen(false);
 
+    const navItems = [
+        { label: 'Quem Somos', href: '#quem-somos' },
+        { label: 'Atuação', href: '#atuacao' },
+        { label: 'Equipe', href: '#equipe' },
+        { label: 'Clientes', href: '#clientes' },
+    ];
+
     return (
         <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-stone-950/80 backdrop-blur-sm py-5'}`}>
             {/* Adicionado gap-4 para garantir que logo e menu nunca se toquem */}
@@ -36,13 +43,13 @@ export default function Header() {
 
                 {/* Desktop Nav - Adicionado whitespace-nowrap e gap/textos responsivos (lg vs xl) */}
                 <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
-                    {['Quem Somos', 'Atuação', 'Equipe', 'Clientes'].map((item) => (
+                    {navItems.map((item) => (
                         <a
-                            key={item}
-                            href={`#${item.toLowerCase().replace(' ', '-')}`}
+                            key={item.label}
+                            href={item.href}
                             className={`text-xs xl:text-sm font-medium uppercase tracking-wider whitespace-nowrap hover:text-amber-600 transition-colors ${isScrolled ? 'text-stone-600' : 'text-stone-300'}`}
                         >
-                            {item}
+                            {item.label}
                         </a>
                     ))}
                     <a
@@ -76,14 +83,14 @@ export default function Header() {
                         }`}
                 >
                     <div className="flex flex-col py-2">
-                        {['Quem Somos', 'Atuação', 'Equipe', 'Clientes'].map((item) => (
+                        {navItems.map((item) => (
                             <a
-                                key={item}
-                                href={`#${item.toLowerCase().replace(' ', '-')}`}
+                                key={item.label}
+                                href={item.href}
                                 onClick={closeMenu}
                                 className="py-3 px-6 text-left text-stone-300 font-medium uppercase text-[11px] tracking-[0.15em] hover:bg-stone-900 hover:text-amber-500 transition-colors border-l-2 border-transparent hover:border-amber-700"
                             >
-                                {item}
+                                {item.label}
                             </a>
                         ))}
                     </div>
