@@ -1,4 +1,9 @@
 import React from 'react';
+import fotoAntonio from '../assets/fotos-time/antonio-pessoa.jpeg';
+import fotoPablicio from '../assets/fotos-time/pablicio-monteiro.jpeg';
+import fotoPablo from '../assets/fotos-time/pablo-monteiro.jpeg';
+// import fotoAdriano from '../assets/fotos-time/adriano-lacerda.jpeg';
+
 
 export default function Team() {
     return (
@@ -19,9 +24,8 @@ export default function Team() {
 
                     {/* Lawyer 1 */}
                     <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
-                        <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-stone-300 relative">
-                            <span className="text-stone-400 text-sm font-medium absolute z-10 text-center px-4">Inserir Foto<br />Antonio Pessoa</span>
-                            <div className="absolute inset-0 bg-stone-300/50 group-hover:bg-transparent transition-colors z-20"></div>
+                        <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 overflow-hidden border border-stone-300">
+                            <img src={fotoAntonio} alt="Antonio Pessoa Cardoso" className="w-full h-full object-cover" />
                         </div>
                         {/* Div do texto com alinhamento responsivo */}
                         <div className="text-center sm:text-left">
@@ -37,8 +41,8 @@ export default function Team() {
 
                     {/* Lawyer 2 */}
                     <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
-                        <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-stone-300 relative">
-                            <span className="text-stone-400 text-sm font-medium absolute z-10 text-center px-4">Inserir Foto<br />Pablício Cardoso</span>
+                        <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 overflow-hidden border border-stone-300">
+                            <img src={fotoPablicio} alt="Pablício Monteiro Cardoso" className="w-full h-full object-cover" />
                         </div>
                         {/* Div do texto com alinhamento responsivo */}
                         <div className="text-center sm:text-left">
@@ -54,8 +58,8 @@ export default function Team() {
 
                     {/* Lawyer 3 */}
                     <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
-                        <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-stone-300 relative">
-                            <span className="text-stone-400 text-sm font-medium absolute z-10 text-center px-4">Inserir Foto<br />Pablo Cardoso</span>
+                        <div className="w-full sm:w-48 h-64 bg-stone-200 rounded-sm flex-shrink-0 overflow-hidden border border-stone-300">
+                            <img src={fotoPablo} alt="Pablo Monteiro Cardoso" className="w-full h-full object-cover" />
                         </div>
                         {/* Div do texto com alinhamento responsivo */}
                         <div className="text-center sm:text-left">

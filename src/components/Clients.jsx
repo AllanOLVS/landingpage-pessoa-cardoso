@@ -7,6 +7,10 @@ import logoDevassa from '../assets/logos-empresas/devassa-brasilia-pessoa-cardos
 import logoPostoShell from '../assets/logos-empresas/posto-shell-pessoa-cardoso.png';
 import logoPremiumEngenharia from '../assets/logos-empresas/premium-engenharia-pessoa-cardoso.png';
 import logoSobesaCafe from '../assets/logos-empresas/sobesa-cafe-pessoa-cardoso.png';
+import logoCslContabilidade from '../assets/logos-empresas/csl-contabilidade-pessoa-cardoso.png';
+import logoVillaContainer from '../assets/logos-empresas/villa-container-mall-pessoa-cardoso.png';
+import logoUniqueConcept from '../assets/logos-empresas/unique-concept-pessoa-cardoso.png';
+import logoPrimeHome from '../assets/logos-empresas/prime-home-pessoa-cardoso.png';
 
 export default function Clients() {
     // Agora a lista é um array de objetos contendo o nome e o caminho da logo
@@ -16,14 +20,14 @@ export default function Clients() {
         { name: 'Academia do Vale', logoUrl: logoAcademiaDoVale },
         { name: 'Premium Engenharia', logoUrl: logoPremiumEngenharia },
         { name: 'Codef', logoUrl: logoComercialFerramentas },
-        { name: 'CSL Contabilidade', logoUrl: null },
-        { name: 'Unique Concept', logoUrl: null },
+        { name: 'CSL Contabilidade', logoUrl: logoCslContabilidade },
+        { name: 'Unique Concept', logoUrl: logoUniqueConcept },
         { name: 'Bella Vila', logoUrl: logoBellaVista },
         { name: 'Devassa Brasília', logoUrl: logoDevassa },
         { name: 'Posto Shell', logoUrl: logoPostoShell },
         { name: 'CIFAIS', logoUrl: logoCifais },
-        { name: 'Primehome', logoUrl: null },
-        { name: 'Villa Container Mall', logoUrl: null }
+        { name: 'Primehome', logoUrl: logoPrimeHome },
+        { name: 'Villa Container Mall', logoUrl: logoVillaContainer }
     ];
 
     return (
