@@ -28,7 +28,7 @@ export default function Team() {
                     {/* Lawyer 1 */}
                     <ScrollReveal direction="left">
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
-                            <div className="w-full sm:w-48 h-80 sm:h-64 bg-stone-200 rounded-sm flex-shrink-0 overflow-hidden border border-stone-300">
+                            <div className="w-full sm:w-48 h-96 sm:h-64 bg-stone-200 rounded-sm flex-shrink-0 overflow-hidden border border-stone-300">
                                 <img src={fotoAntonio} alt="Antonio Pessoa Cardoso" className="w-full h-full object-cover" />
                             </div>
                             <div className="text-center sm:text-left">
@@ -46,7 +46,7 @@ export default function Team() {
                     {/* Lawyer 2 */}
                     <ScrollReveal direction="right">
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
-                            <div className="w-full sm:w-48 h-80 sm:h-64 bg-stone-200 rounded-sm flex-shrink-0 overflow-hidden border border-stone-300">
+                            <div className="w-full sm:w-48 h-96 sm:h-64 bg-stone-200 rounded-sm flex-shrink-0 overflow-hidden border border-stone-300">
                                 <img src={fotoPablicio} alt="Pablício Monteiro Cardoso" className="w-full h-full object-cover" />
                             </div>
                             <div className="text-center sm:text-left">
@@ -64,7 +64,7 @@ export default function Team() {
                     {/* Lawyer 3 */}
                     <ScrollReveal direction="left">
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
-                            <div className="w-full sm:w-48 h-80 sm:h-64 bg-stone-200 rounded-sm flex-shrink-0 overflow-hidden border border-stone-300">
+                            <div className="w-full sm:w-48 h-96 sm:h-64 bg-stone-200 rounded-sm flex-shrink-0 overflow-hidden border border-stone-300">
                                 <img src={fotoPablo} alt="Pablo Monteiro Cardoso" className="w-full h-full object-cover" />
                             </div>
                             <div className="text-center sm:text-left">
@@ -82,7 +82,7 @@ export default function Team() {
                     {/* Lawyer 4 */}
                     <ScrollReveal direction="right">
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group">
-                            <div className="w-full sm:w-48 h-80 sm:h-64 bg-stone-200 rounded-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-stone-300 relative">
+                            <div className="w-full sm:w-48 h-96 sm:h-64 bg-stone-200 rounded-sm flex-shrink-0 flex items-center justify-center overflow-hidden border border-stone-300 relative">
                                 <span className="text-stone-400 text-sm font-medium absolute z-10 text-center px-4">Inserir Foto<br />Adriano Lacerda</span>
                             </div>
                             <div className="text-center sm:text-left">
